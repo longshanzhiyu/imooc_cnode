@@ -1,0 +1,5 @@
+<block>
+    <scroll-view style="{{anonymousState__temp}}" scroll-y="{{true}}" bindscrolltolower="onScrollToLower" data-e-scrolltolower-so="this">
+        <topic item="{{item}}" __triggerObserer="{{ _triggerObserer }}" wx:for="{{list}}" wx:for-item="item"></topic>
+    </scroll-view>
+</block>

@@ -1,0 +1,31 @@
+<block>
+    <view class="topic-info">
+        <view class="topic-info-header">
+            <view class="topic-info-header-title">
+                <block>
+                    <block wx:if="{{topicinfo.top}}"><text class="topic-up">置顶</text>
+                    </block>
+                    <block wx:else>
+                        <block>
+                            <block wx:if="{{topicinfo.tab == 'share'}}"><text class="topic-up blue">分享</text>
+                            </block>
+                            <block wx:else><text class="topic-up blue">问答</text>
+                            </block>
+                        </block>
+                    </block>
+                </block><text>{{topicinfo.title}}</text>
+            </view>
+            <view class="topic-info-header-pie"><text>{{anonymousState__temp}}</text><text>{{topicinfo.author ? topicinfo.author.loginname : ''}}</text><text>{{topicinfo.visit_count + '次浏览'}}</text>
+            </view>
+            <block wx:if="{{selfPublish}}">
+                <view class="topic-info-header-img">
+                    <image bindtap="delTopic" class="img" src="{{anonymousState__temp2}}" data-e-tap-so="this" data-e-tap-a-a="{{topicinfo}}"></image>
+                    <image bindtap="editTopic" class="img" src="{{anonymousState__temp3}}" data-e-tap-so="this" data-e-tap-a-a="{{topicinfo}}"></image>
+                </view>
+            </block>
+        </view>
+        <view class="topic-info-body">
+            <rich-text nodes="{{topicinfo.content}}"></rich-text>
+        </view>
+    </view>
+</block>

@@ -1,0 +1,8 @@
+<block>
+    <view class="topic-panel">
+        <view class="topic-panel-title">{{title}}</view>
+        <view bindtap="toDetail" class="topic-panel-list" wx:key="$original.id" wx:for="{{loopArray0}}" wx:for-item="item" data-e-tap-so="this" data-e-tap-a-a="{{item.$original}}">
+            <image class="topic-panne-list-img" src="{{item.$original.author.avatar_url}}"></image><text class="topic-panne-list-title">{{item.$original.title}}</text><text class="topic-panne-list-date">{{item.$loopState__temp2}}</text>
+        </view>
+    </view>
+</block>

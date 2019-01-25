@@ -1,0 +1,14 @@
+{
+	"projectname": "cnode",
+	"description": "this is cnode",
+	"appid": "wxc17f05f23eac21b2",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"condition": {}
+}

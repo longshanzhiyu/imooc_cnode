@@ -1,0 +1,10 @@
+<block>
+    <view class="publish-topic">
+        <input value="{{topicinfo.title}}" class="publish-topic-title" bindinput="titleChange" placeholder="请输入你要发布的标题" data-e-input-so="this" />
+        <textarea value="{{topicinfo.content}}" class="publish-topic-content" bindinput="contentChange" placeholder="请输入您要发布的内容" data-e-input-so="this"></textarea>
+        <picker bindchange="changeCata" mode="selector" range="{{cataData}}" range-key="value" data-e-change-so="this">
+            <view class="publish-topic-cata">{{selectCata ? selectCata.value : '请选择'}}</view>
+        </picker>
+        <button class="publish-topic-btn" bindtap="submitTopic" data-e-tap-so="this">提交</button>
+    </view>
+</block>

@@ -1,0 +1,9 @@
+<block>
+    <view class="replycontent">
+        <textarea bindinput="changeContent" class="replycontent-text" placeholder="请输入回复内容" data-e-input-so="this"></textarea>
+        <view class="replycontent-btngroup">
+            <button bindtap="btnOK" class="btn" data-e-tap-so="this">确定</button>
+            <button bindtap="btnCancel" class="btn" data-e-tap-so="this">取消</button>
+        </view>
+    </view>
+</block>

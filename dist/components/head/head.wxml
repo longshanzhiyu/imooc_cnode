@@ -1,0 +1,8 @@
+<block>
+    <view class="login-head">
+        <image class="login-head-back" src="{{anonymousState__temp}}"></image>
+        <image class="login-head-head" src="{{anonymousState__temp2}}"></image>
+        <block wx:if="{{loginname}}"><text class="login-head-name">{{loginname}}</text>
+        </block>
+    </view>
+</block>

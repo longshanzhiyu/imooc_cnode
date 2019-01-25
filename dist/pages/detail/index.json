@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "reply-content": "../../components/topicinfo/replycontent",
+    "topic-info": "../../components/topicinfo/topicinfo",
+    "replies": "../../components/topicinfo/replies"
+  },
+  "navigationBarTitleText": "话题详情"
+}
