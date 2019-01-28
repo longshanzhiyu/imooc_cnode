@@ -63,9 +63,9 @@ class Menu extends Component {
 		let items = this.getItems(cataData); //获取分类列表
 		return (<View className='topiclist-menu'>
 					<AtDrawer onClose={this.closeDrawer.bind(this)} onItemClick={this.clickCata.bind(this)} style='position:absolute;' show={showDrawer} items={items}/>
-					<Image onClick={this.showDrawer.bind(this)} className='image' src={require('../../assets/img/cata.png')}/>
+					<Image onClick={this.showDrawer.bind(this)} className='image left' src={require('../../assets/img/cata.png')}/>
 					<Text>{this.props.currentCata.value?this.props.currentCata.value:''}</Text>
-					<Image onClick={this.toUser.bind(this)} className='image' src={Login}/>
+					<Image onClick={this.toUser.bind(this)} className='image right' src={Login}/>
 				</View>)
 	}
 } 

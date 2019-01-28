@@ -1,6 +1,0 @@
-<block>
-    <view class="index">
-        <menu __triggerObserer="{{ _triggerObserer }}"></menu>
-        <topic-list __triggerObserer="{{ _triggerObserer }}"></topic-list>
-    </view>
-</block>

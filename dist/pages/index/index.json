@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "menu": "../../components/menu/menu",
-    "topic-list": "../../components/topiclist/topiclist"
-  },
-  "navigationBarTitleText": "首页"
-}

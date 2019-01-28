@@ -1,7 +1,0 @@
-<block>
-    <view class="topiclist-menu">
-        <at-drawer bindonclose="closeDrawer" __triggerObserer="{{ _triggerObserer }}" bindonitemclick="clickCata" style="position:absolute;" show="{{showDrawer}}" items="{{items}}" __fn_onClose="{{true}}" data-e-onclose-so="this" __fn_onItemClick="{{true}}" data-e-onitemclick-so="this"></at-drawer>
-        <image bindtap="showDrawer" class="image" src="{{anonymousState__temp}}" data-e-tap-so="this"></image><text>{{currentCata.value ? currentCata.value : ''}}</text>
-        <image bindtap="toUser" class="image" src="{{Login}}" data-e-tap-so="this"></image>
-    </view>
-</block>

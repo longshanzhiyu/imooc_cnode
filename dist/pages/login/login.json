@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "head": "../../components/head/head"
-  },
-  "navigationBarTitleText": "登录"
-}

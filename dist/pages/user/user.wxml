@@ -1,9 +1,0 @@
-<block>
-    <view>
-        
-        <head loginname="{{loginname}}" __triggerObserer="{{ _triggerObserer }}" avatar_url="{{avatar_url}}"></head>
-        <panel listData="{{recent_topics}}" __triggerObserer="{{ _triggerObserer }}" title="最近发布的话题"></panel>
-        <panel listData="{{recent_replies}}" __triggerObserer="{{ _triggerObserer }}" title="最近收到的回复"></panel>
-        <button class="publish_btn" bindtap="publishTopic" data-e-tap-so="this">发布话题</button>
-    </view>
-</block>
