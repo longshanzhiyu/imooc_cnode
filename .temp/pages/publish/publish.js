@@ -13,12 +13,11 @@ class Publish extends Component {
 
   componentWillMount() {
     let { edit } = this.$router.params;
-    this.setState({ isEdit: edit == '1' }, () => {
-      if (this.state.isEdit) {
-        let { topicinfo } = this.props;
-        this.setState({ topicinfo: topicinfo, title: topicinfo.title, content: topicinfo.content });
-      }
-    });
+    let { topicinfo } = this.props;
+    this.setState({ isEdit: edit == '1',
+      topicinfo: topicinfo,
+      title: topicinfo ? topicinfo.title : '',
+      content: topicinfo ? topicinfo.content : '' });
   }
 
   state = {
@@ -66,21 +65,16 @@ class Publish extends Component {
 
   render() {
     let { cataData } = this.props;
-    let { selectCata, topicinfo } = this.state;
+    let { selectCata, topicinfo, isEdit } = this.state;
     return <View className="publish-topic">
-				<Input value={topicinfo.title} className="publish-topic-title" onInput={this.titleChange.bind(this)} placeholder="请输入你要发布的标题" />
-				<Textarea value={topicinfo.content} className="publish-topic-content" onInput={this.contentChange.bind(this)} placeholder="请输入您要发布的内容" />
+				<Input value={isEdit ? topicinfo ? topicinfo.title : '' : ''} className="publish-topic-title" onInput={this.titleChange.bind(this)} placeholder="请输入你要发布的标题" />
+				<Textarea value={isEdit ? topicinfo ? topicinfo.content : '' : ''} className="publish-topic-content" onInput={this.contentChange.bind(this)} placeholder="请输入您要发布的内容" />
 				<Picker onChange={this.changeCata.bind(this)} mode="selector" range={cataData} rangeKey="value">
 					<View className="publish-topic-cata">{selectCata ? selectCata.value : '请选择'}</View>
 				</Picker>
 				<Button className="publish-topic-btn" onClick={this.submitTopic.bind(this)}>提交</Button>
 			</View>;
   }
-
-  componentDidMount() {}
-
-  componentDidShow() {}
-
 }
 
 export default Publish;
